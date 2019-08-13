@@ -2,7 +2,7 @@
     "name": "kalos-admin",
     "version": "1.0.0",
     "description": "kalos admin module",
-    "main": "index.jsx",
+    "main": "index.js",
     "license": "MIT",
     "scripts": {
         "build": "yarn clean; webpack --config config/webpack-prod-config.js",
@@ -52,6 +52,8 @@
         "babel-eslint": "^10.0.2",
         "pretty-quick": "^1.11.1",
         "react": "^16.8.6",
-        "react-dom": "^16.8.6"
+        "react-dom": "^16.8.6",
+        "react-redux": "^7.1.0",
+        "redux": "^4.0.4"
     }
 }
