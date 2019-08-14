@@ -1,35 +1,46 @@
 {
-    "parser": "babel-eslint",
-    "parserOptions": {
-        "sourceType": "module",
-        "allowImportExportEverywhere": false,
-        "codeFrame": false
-    },
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"sourceType": "module",
+		"allowImportExportEverywhere": false,
+		"codeFrame": false
+	},
 
-    "extends": ["airbnb", "plugin:prettier/recommended"],
-    "plugins": ["react", "prettier"],
-    "rules": {
-        "react/jsx-filename-extension": [
-            1,
-            {
-                "extensions": ["js", "jsx"]
-            }
-        ],
-        "import/no-extraneous-dependencies": ["error", {
-            "devDependencies": true
-        }],
-        "prefer-promise-reject-errors": ["off"],
-        "prettier/prettier": "error",
-        "max-len": ["error", 80],
-    },
-    "env": {
-        "browser": true,
-    },
-    "settings": {
-        "import/resolver": {
-            "webpack": {
-                "config": "./config/webpack-common-config.js"
-            }
-        }
-    }
+	"extends": ["airbnb", "plugin:prettier/recommended"],
+	"plugins": ["react", "prettier"],
+	"rules": {
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": ["js", "jsx"]
+			}
+		],
+		"import/no-extraneous-dependencies": ["error", {
+			"devDependencies": true
+		}],
+		"prefer-promise-reject-errors": ["off"],
+		"prettier/prettier": "error",
+		"max-len": ["error", 80],
+		"indent": ["error", "tab", {
+			"SwitchCase": 1,
+			"ignoredNodes": [
+				"JSXElement", "JSXElement > *", "JSXAttribute",
+				"JSXIdentifier", "JSXNamespacedName",
+				"JSXMemberExpression", "JSXSpreadAttribute",
+				"JSXExpressionContainer", "JSXOpeningElement",
+				"JSXClosingElement", "JSXText",
+				"JSXEmptyExpression", "JSXSpreadChild"
+			]
+		}, ]
+	},
+	"env": {
+		"browser": true,
+	},
+	"settings": {
+		"import/resolver": {
+			"webpack": {
+				"config": "./config/webpack-common-config.js"
+			}
+		}
+	}
 }
