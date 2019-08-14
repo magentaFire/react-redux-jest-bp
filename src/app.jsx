@@ -8,7 +8,7 @@ import style from './app.css';
 const App = () => {
 	return (
 		<Provider store={store}>
-			<div className={style.app}>`React starter</div>
+			<div className={style.app}>React starter</div>
 		</Provider>
 	);
 };
