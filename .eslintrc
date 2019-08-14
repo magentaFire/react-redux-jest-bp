@@ -31,7 +31,9 @@
 				"JSXClosingElement", "JSXText",
 				"JSXEmptyExpression", "JSXSpreadChild"
 			]
-		}, ]
+		}, ],
+		"react/jsx-indent": ["error", "tab"],
+		"react/jsx-indent-props": ["error", "tab"],
 	},
 	"env": {
 		"browser": true,
