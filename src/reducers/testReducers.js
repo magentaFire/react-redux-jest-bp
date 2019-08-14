@@ -1,6 +1,4 @@
-const initialState = {
-	citas: [1, 2, 3, 4]
-};
+const initialState = { citas: [1, 2, 3, 4] };
 
 export default (state = initialState, action) => {
 	switch (action.type) {

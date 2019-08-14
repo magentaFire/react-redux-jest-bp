@@ -11,23 +11,23 @@ const Port = 3000;
 const Host = 'localhost';
 
 const options = {
-    host: Host,
-    hot: true,
-    // full-screen overlay in the browser for compiler errors or warnings
-    overlay: {
-        warnings: false,
-        errors: true
-    },
-    quiet: false,
-    noInfo: false,
-    // Tell the server where to serve static files from.
-    // Set this is the `paths.js` file.
-    contentBase: paths.appAssets,
-    // If static content changes, reload the page.
-    watchContentBase: true,
-    after() {
-        process.stdout.write(`dev server is running: http://${Host}:${Port}\n`);
-    }
+	host: Host,
+	hot: true,
+	// full-screen overlay in the browser for compiler errors or warnings
+	overlay: {
+		warnings: false,
+		errors: true
+	},
+	quiet: false,
+	noInfo: false,
+	// Tell the server where to serve static files from.
+	// Set this is the `paths.js` file.
+	contentBase: paths.appAssets,
+	// If static content changes, reload the page.
+	watchContentBase: true,
+	after() {
+		process.stdout.write(`dev server is running: http://${Host}:${Port}\n`);
+	}
 };
 
 WebpackDevServer.addDevServerEntrypoints(config, options);

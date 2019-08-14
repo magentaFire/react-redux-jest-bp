@@ -5,8 +5,7 @@
 		"allowImportExportEverywhere": false,
 		"codeFrame": false
 	},
-
-	"extends": ["airbnb", "plugin:prettier/recommended"],
+	"extends": ["airbnb", "prettier"],
 	"plugins": ["react", "prettier"],
 	"rules": {
 		"react/jsx-filename-extension": [
@@ -21,19 +20,7 @@
 		"prefer-promise-reject-errors": ["off"],
 		"prettier/prettier": "error",
 		"max-len": ["error", 80],
-		"indent": ["error", "tab", {
-			"SwitchCase": 1,
-			"ignoredNodes": [
-				"JSXElement", "JSXElement > *", "JSXAttribute",
-				"JSXIdentifier", "JSXNamespacedName",
-				"JSXMemberExpression", "JSXSpreadAttribute",
-				"JSXExpressionContainer", "JSXOpeningElement",
-				"JSXClosingElement", "JSXText",
-				"JSXEmptyExpression", "JSXSpreadChild"
-			]
-		}, ],
-		"react/jsx-indent": ["error", "tab"],
-		"react/jsx-indent-props": ["error", "tab"],
+		"react/jsx-indent" : ["error", "tab"],
 	},
 	"env": {
 		"browser": true,
