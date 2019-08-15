@@ -17,6 +17,22 @@
 			"pre-commit": "pretty-quick --staged"
 		}
 	},
+	"jest": {
+		"setupFilesAfterEnv": [
+			"jest-enzyme"
+		],
+		"testEnvironment": "enzyme",
+		"collectCoverage": true,
+		"collectCoverageFrom": [
+			"./src/*.{js,jsx}",
+			"!**/node_modules/**",
+			"!**/vendor/**"
+		],
+		"moduleNameMapper": {
+			"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "**/__mocks__/fileMock.js",
+			"\\.(css|less|scss|sass)$": "identity-obj-proxy"
+		}
+	},
 	"devDependencies": {
 		"@babel/core": "^7.5.5",
 		"@babel/plugin-proposal-object-rest-spread": "^7.5.5",
@@ -25,6 +41,8 @@
 		"@babel/preset-react": "^7.0.0",
 		"babel-loader": "^8.0.6",
 		"css-loader": "^3.2.0",
+		"enzyme": "^3.10.0",
+		"enzyme-adapter-react-16": "^1.14.0",
 		"eslint": "^6.1.0",
 		"eslint-config-airbnb": "^17.1.1",
 		"eslint-config-prettier": "^6.0.0",
@@ -37,11 +55,15 @@
 		"file-loader": "^4.2.0",
 		"html-webpack-plugin": "^3.2.0",
 		"husky": "2.7.0",
+		"identity-obj-proxy": "^3.0.0",
 		"jest": "^24.8.0",
+		"jest-environment-enzyme": "^7.1.0",
+		"jest-enzyme": "^7.1.0",
 		"lint-staged": "^9.2.1",
 		"path": "^0.12.7",
 		"prettier": "^1.18.2",
 		"react-hot-loader": "^4.12.10",
+		"react-test-renderer": "^16.9.0",
 		"serve": "^11.1.0",
 		"style-loader": "^1.0.0",
 		"uglifyjs-webpack-plugin": "^2.2.0",
