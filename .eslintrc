@@ -21,6 +21,7 @@
 		"prettier/prettier": "error",
 		"max-len": ["error", 80],
 		"react/jsx-indent" : ["error", "tab"],
+		"react/jsx-indent-props" : 0
 	},
 	"env": {
 		"browser": true,
