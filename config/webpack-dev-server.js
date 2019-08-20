@@ -27,7 +27,8 @@ const options = {
 	watchContentBase: true,
 	after() {
 		process.stdout.write(`dev server is running: http://${Host}:${Port}\n`);
-	}
+	},
+	historyApiFallback: true
 };
 
 WebpackDevServer.addDevServerEntrypoints(config, options);
